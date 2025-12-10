@@ -1,0 +1,182 @@
+*,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}body{min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}ul[role='list'],ol[role='list']{list-style:none}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}p{text-wrap:pretty}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}#root,#__next{isolation:isolate}@media (prefers-reduced-motion:no-preference){html{interpolate-size:allow-keywords}}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}:focus-visible{outline:2px solid currentColor;outline-offset:2px}:focus:not(:focus-visible){outline:none}button,input[type="submit"],input[type="reset"]{background:none;color:inherit;border:none;padding:0;font:inherit;cursor:pointer;outline:inherit}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}button:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+
+
+/*************************************/
+
+body {
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper-header {
+  background-image: url(../images/back.jpg);
+  background-size: cover;
+  background-position: center top;
+
+  position: relative;
+  top: -100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+section {
+  padding:0 20px;
+  text-align: center;
+  width: 100%;
+}
+
+#header {
+  padding: 200px 20px 240px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  position: relative;
+}
+
+#header h1 {
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 56px;
+  line-height: 100%;
+  text-align: left;
+  letter-spacing: -2px;
+
+  padding-left: 20px;
+  max-width: 1280px;
+}
+
+#header h1::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 98px;
+  background-color: #ffffff;
+  margin-bottom: 16px;
+  position: absolute;
+  left: 0px;
+  margin-top: 7px;
+}
+
+#header p {
+  color: #ffffff;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.wrap {
+  max-width: 1024px;
+  width: 100%;
+}
+
+#nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 20px;
+}
+
+#nav .title {
+  color: #005A70;
+  font-size: 24px;
+}
+
+#nav a {
+  text-decoration: none;
+  font-weight: 500; /* Corrigé: 16px n'est pas valide pour font-weight */
+  color: #ffffff;
+}
+
+#nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav ul li:not(:last-of-type) {
+    padding-right: 40px;
+}
+
+/* Styles hamburger - masqué par défaut */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #005A70;
+    padding: 5px;
+}
+
+.nav-toggle-checkbox {
+    display: none;
+}
+
+/* Media query mobile */
+@media (max-width: 900px) {
+    #nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    
+    #nav ul.active {
+        display: flex;
+    }
+    
+    #nav ul li {
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #nav ul li:last-of-type {
+        border-bottom: none;
+    }
+    
+    #nav ul li:not(:last-of-type) {
+        padding-right: 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    /* Animation ouverture/fermeture */
+    #nav:has(.nav-toggle-checkbox:checked) ul {
+        display: flex;
+    }
+
+    #nav .contact {
+
+    }
+
+    .accordion{
+      padding: 80px 20px 0 !important;
+    }
+}

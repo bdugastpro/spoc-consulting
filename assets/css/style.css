@@ -27,6 +27,13 @@ body {
   align-items: center;
 }
 
+.wrapper-footer {
+  background-image: url(../images/footer.jpg);
+  background-size: cover;
+  background-position: top 100%;
+  min-height: 80vh;
+}
+
 #main {
   display: flex;
   flex-direction: column;
@@ -383,4 +390,105 @@ h2 .whitebar {
 
 .pilier:nth-child(2) .title {
   flex-direction: row-reverse;
+}
+
+#partenaires .wb-wrap::before, #reseaux .wb-wrap::before {
+  background: var(--grey);
+}
+
+#partenaires, #reseaux {
+  margin-top: 100px;
+}
+.containerPartenaires {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 8rem;
+}
+
+#partenaires .containerImageEcoles {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+
+  margin-top: 50px;
+}
+
+#partenaires .containerImageEcoles .logos-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem; /* gap vertical et horizontal */
+  align-items: center; /* centre verticalement dans chaque cellule */
+}
+
+.logo-item {
+  display: flex;
+  justify-content: center; /* centre le logo horizontalement */
+}
+
+.logos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 1rem; /* 3rem vertical, 2rem horizontal */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-item img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100px; /* limite la hauteur des logos */
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .logos-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+  }
+
+  .containerGrey, .containerNumbers, .pilier, .pilier .content, .containerPartenaires {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  .wrap {
+    padding: 0;
+  }
+  
+  .numberBox {
+    margin: 20px 0;
+  }
+
+  .content-center {
+    padding: 0 20px;
+  }
+
+  .pilier, #partenaires, #reseaux {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logos-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }

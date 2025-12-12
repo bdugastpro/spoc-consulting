@@ -30,7 +30,7 @@ body {
 .wrapper-footer {
   background-image: url(../images/footer.jpg);
   background-size: cover;
-  background-position: top 100%;
+  background-position: top center;
   min-height: 80vh;
 }
 
@@ -201,6 +201,7 @@ h2 .whitebar {
   cursor: pointer;
   transition: background 0.25s, box-shadow 0.25s, transform 0.25s;
   box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  text-decoration: none;
 }
 
 .contact:hover {
@@ -432,7 +433,7 @@ h2 .whitebar {
   gap: 1rem 1rem; /* 3rem vertical, 2rem horizontal */
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 1rem;
 }
 
@@ -447,6 +448,28 @@ h2 .whitebar {
   height: auto;
   max-height: 100px; /* limite la hauteur des logos */
   object-fit: contain;
+}
+
+#contact .wrapper-footer {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact .wrap {
+  text-align: center;
+  color: var(--white);
+}
+
+#contact .wrap h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+#contact .wrap p {
+  margin-bottom: 100px;
 }
 
 /* Responsive */
@@ -491,4 +514,8 @@ h2 .whitebar {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+}
+
+html {
+    scroll-behavior: auto !important;
 }

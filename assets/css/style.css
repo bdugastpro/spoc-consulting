@@ -504,7 +504,15 @@ h2 .whitebar {
     padding: 0 20px;
   }
 
-  .pilier, #partenaires, #reseaux {
+  #partenaires, #reseaux, #apropos, #piliers {
+    padding: 0 10px;
+  }
+
+  #apropos {
+    padding-bottom: 80px;
+  }
+
+  .wrapper-header {
     padding: 0 10px;
   }
 }

@@ -393,11 +393,11 @@ h2 .whitebar {
   flex-direction: row-reverse;
 }
 
-#partenaires .wb-wrap::before, #reseaux .wb-wrap::before {
+#partenaires .wb-wrap::before, #reseau .wb-wrap::before {
   background: var(--grey);
 }
 
-#partenaires, #reseaux {
+#partenaires, #reseau {
   margin-top: 100px;
 }
 .containerPartenaires {
@@ -406,7 +406,7 @@ h2 .whitebar {
   gap: 1.5rem 8rem;
 }
 
-#partenaires .containerImageEcoles {
+#reseau .containerImageEcoles {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
@@ -414,7 +414,7 @@ h2 .whitebar {
   margin-top: 50px;
 }
 
-#partenaires .containerImageEcoles .logos-container {
+#reseau .containerImageEcoles .logos-container {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -504,7 +504,7 @@ h2 .whitebar {
     padding: 0 20px;
   }
 
-  #partenaires, #reseaux, #apropos, #piliers {
+  #partenaires, #reseau, #apropos, #piliers {
     padding: 0 10px;
   }
 

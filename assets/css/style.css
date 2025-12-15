@@ -388,6 +388,9 @@ h2 .whitebar {
   direction: rtl;
   text-align: left;
 }
+.pilier:nth-child(2) .full{
+  margin-left: 20px;
+}
 
 .pilier:nth-child(2) .title {
   flex-direction: row-reverse;

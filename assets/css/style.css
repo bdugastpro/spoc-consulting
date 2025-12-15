@@ -218,7 +218,7 @@ h2 .whitebar {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #ffffff;
+        background-color: #000000;
         flex-direction: column;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
@@ -238,8 +238,8 @@ h2 .whitebar {
         border-bottom: none;
     }
     
-    #nav ul li:not(:last-of-type) {
-        padding-right: 0;
+    #nav ul li {
+      padding-right: 0 !important;
     }
     
     .hamburger {
@@ -251,8 +251,8 @@ h2 .whitebar {
         display: flex;
     }
 
-    #nav .contact {
-
+    #header h1 { 
+      font-size: 40px;
     }
 
     .accordion{
@@ -484,8 +484,12 @@ h2 .whitebar {
   }
 
   h2 {
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 20px;
+  }
+
+  .numberBox .number {
+    font-size: 100px;
   }
 
   h3 {

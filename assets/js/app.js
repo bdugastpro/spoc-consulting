@@ -38,6 +38,7 @@ function smoothScrollToElement(element, duration = 800, targetId = null) {
     requestAnimationFrame(scrollAnimation);
 }
 
+
 // Configuration des offsets par section
 const offsetConfig = {
     '#header': 0,
@@ -48,22 +49,27 @@ const offsetConfig = {
     '#contact': 0
 };
 
+const navCheckbox = document.getElementById('nav-toggle');
+const navMenu = document.querySelector('#nav ul');
 // Gestion des clics sur les liens de navigation
+// Fermer le menu mobile au clic sur un lien
 const navLinks = document.querySelectorAll('a[href^="#"]');
 navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        console.log('Target ID:', targetId);
-        console.log('Element trouvé:', targetElement);
-        console.log('Position actuelle:', window.scrollY);
-        
-        if (targetElement) {
-            smoothScrollToElement(targetElement, 800, targetId);
-        }
-    });
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      smoothScrollToElement(targetElement, 800, targetId);
+    }
+
+    // fermeture du menu mobile
+    navMenu.classList.remove('active');
+    if (navCheckbox) {
+      navCheckbox.checked = false;
+    }
+  });
 });
 
 // Gestion de TOUS les boutons nav-toggle (avec querySelectorAll)
@@ -74,3 +80,5 @@ navToggles.forEach(toggle => {
         ul.classList.toggle('active');
     });
 });
+
+
